@@ -1,0 +1,11 @@
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Hotel
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/appsettings.Development.json
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/appsettings.json
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Hotel.dll
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Hotel.deps.json
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Hotel.runtimeconfig.json
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Hotel.pdb
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Microsoft.OpenApi.dll
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/vitornunesdasilva/Documents/Unimar/4/Arquitetura-Software/Hotel/bin/Release/net8.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
