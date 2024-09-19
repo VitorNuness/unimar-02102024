@@ -9,6 +9,8 @@ public partial class HotelDbContext : DbContext
 
     public DbSet<Reserve> Reserves { get; set; }
 
+    public DbSet<Room> Rooms { get; set; }
+
 
 
     public HotelDbContext()
