@@ -7,6 +7,10 @@ public partial class HotelDbContext : DbContext
 {
     public DbSet<Guest> Guests { get; set; }
 
+    public DbSet<Reserve> Reserves { get; set; }
+
+
+
     public HotelDbContext()
     {
     }
