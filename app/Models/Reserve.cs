@@ -11,20 +11,23 @@ namespace Hotel.app.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
+
         public string? Id { get; set; }
-        public string? Numero { get; set; }
 
-        public string? Categoria { get; set; }
+        public Guest? Hospede { get; set; }
 
+        public Room? Quarto { get; set; }
 
-        public Reserve(string id, string numero, string categoria)
+        public DateTime? Data { get; set; }
+
+        public Reserve(string id, Guest hospede, Room quarto, DateTime data)
         {
             this.Id = id;
-            this.Numero = numero;
-            this.Categoria = categoria;
+            this.Hospede = hospede;
+            this.Quarto = quarto;
         }
 
-        public Reserve() { }
+        private Reserve() { }
 
     }
 
