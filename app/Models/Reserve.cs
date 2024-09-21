@@ -25,9 +25,18 @@ namespace Hotel.app.Models
             this.Id = id;
             this.Hospede = hospede;
             this.Quarto = quarto;
+            this.SetDate(data);
         }
 
         private Reserve() { }
+
+        private void SetDate(DateTime data)
+        {
+            if (data < DateTime.Today)
+            {
+                throw new Exception ("A data é invalida");
+            }
+        }
 
     }
 
