@@ -1,9 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hotel.app.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel.Database;
 
 public partial class HotelDbContext : DbContext
 {
+    public DbSet<Guest> Guests { get; set; }
+
+    public DbSet<Reserve> Reserves { get; set; }
+
+    public DbSet<Room> Rooms { get; set; }
+
+
+
     public HotelDbContext()
     {
     }
