@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hotel.app.DTOs;
 using Hotel.app.Models;
 using Hotel.Database;
 
@@ -18,8 +19,14 @@ namespace Hotel.app.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<Reserve> Store(Reserve reserve)
+        public async Task<Reserve> Store(ReserveDTO reserveDTO)
         {
+            Reserve reserve = new(
+                reserveDTO.Guest,
+                reserveDTO.Room,
+                reserveDTO.Date
+            );
+
             _dbContext.Reserves.Add(reserve);
             await _dbContext.SaveChangesAsync();
 
