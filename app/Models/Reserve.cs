@@ -14,25 +14,24 @@ namespace Hotel.app.Models
 
         public string? Id { get; set; }
 
-        public Guest? Hospede { get; set; }
+        public Guest? Guest { get; set; }
 
-        public Room? Quarto { get; set; }
+        public Room? Room { get; set; }
 
-        public DateTime? Data { get; set; }
+        public DateTime? Date { get; set; }
 
-        public Reserve(string id, Guest hospede, Room quarto, DateTime data)
+        public Reserve(Guest guest, Room room, DateTime date)
         {
-            this.Id = id;
-            this.Hospede = hospede;
-            this.Quarto = quarto;
-            this.SetDate(data);
+            this.Guest = guest;
+            this.Room = room;
+            this.SetDate(date);
         }
 
         private Reserve() { }
 
-        private void SetDate(DateTime data)
+        private void SetDate(DateTime date)
         {
-            if (data < DateTime.Today)
+            if (date < DateTime.Today)
             {
                 throw new Exception ("A data é invalida");
             }

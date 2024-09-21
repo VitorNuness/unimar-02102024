@@ -12,16 +12,15 @@ namespace Hotel.app.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public string? Id { get; set; }
-        public string? Numero { get; set; }
+        public string? Number { get; set; }
 
-        public string? Categoria { get; set; }
+        public string? Category { get; set; }
 
 
-        public Room(string id, string numero, string categoria)
+        public Room(string number, string category)
         {
-            this.Id = id;
-            this.Numero = numero;
-            this.Categoria = categoria;
+            this.Number = number;
+            this.Category = category;
         }
 
         public Room() { }
