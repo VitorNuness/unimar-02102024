@@ -15,13 +15,13 @@ namespace Hotel.app.Models
         public string? Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
-        public bool? Ativo { get; set; }
+        public bool? Active { get; set; }
 
-        public Guest(string name, string email, bool ativo)
+        public Guest(string name, string email, bool active)
         {
             this.Name = name;
             this.Email = email;
-            this.Ativo = ativo;
+            this.Active = active;
         }
 
         private Guest() { }
