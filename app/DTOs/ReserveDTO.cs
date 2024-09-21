@@ -11,5 +11,12 @@ namespace Hotel.app.DTOs
         public Guest? Guest { get; set; }
         public Room? Room { get; set; }
         public DateTime Date { get; set; }
+
+        public ReserveDTO(Guest guest, Room room, DateTime date)
+        {
+            Guest = guest;
+            Room = room;
+            Date = date;
+        }
     }
 }
