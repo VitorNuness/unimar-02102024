@@ -3,12 +3,12 @@
 ## Requisitos
 
 -   O sistema deve receber requisições para criar reservas de hospedagem.
--   Cada reserva deve durar 1 dia;
--   Validações para que uma reserva seja agendada:
--   O quarto deve estar disponível na data especificada;
--   O hóspede deve estar ativo.
--   Ao final da requisição, o sistema deve:
--   Enviar e-mail para o hóspede notificando-o sobre o resultado de sua reserva (sucesso ou falha) e detalhes
+    -   Cada reserva deve durar 1 dia;
+    -   Validações para que uma reserva seja agendada:
+        -   O quarto deve estar disponível na data especificada;
+        -   O hóspede deve estar ativo.
+    -   Ao final da requisição, o sistema deve:
+        -   Enviar e-mail para o hóspede notificando-o sobre o resultado de sua reserva (sucesso ou falha) e detalhes
 
 ## Classes sugeridas
 

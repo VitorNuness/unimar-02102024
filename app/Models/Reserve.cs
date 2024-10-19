@@ -22,9 +22,9 @@ namespace Hotel.app.Models
 
         public Reserve(Guest guest, Room room, DateTime date)
         {
-            this.Guest = guest;
-            this.Room = room;
+            this.SetGuest(guest);
             this.SetDate(date);
+            this.Room = room;
         }
 
         private Reserve() { }
@@ -33,8 +33,18 @@ namespace Hotel.app.Models
         {
             if (date < DateTime.Today)
             {
-                throw new Exception ("A data é invalida");
+                throw new InvalidDateException("Não foi possível criar a reserva! A data é invalida.");
             }
+            this.Date = date;
+        }
+
+        private void SetGuest(Guest guest)
+        {
+            if (guest.Active == false)
+            {
+                throw new InvalidGuestException("Não foi possível criar a reserva! O Hóspede deve estar ativo.");
+            }
+            this.Guest = guest;
         }
 
     }
