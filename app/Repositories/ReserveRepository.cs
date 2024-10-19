@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Hotel.app.DTOs;
 using Hotel.app.Models;
 using Hotel.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel.app.Repositories
 {
@@ -31,6 +32,16 @@ namespace Hotel.app.Repositories
             await _dbContext.SaveChangesAsync();
 
             return reserve;
+        }
+
+        public async Task<IEnumerable<Reserve?>> WhereDate(DateTime date)
+        {
+            return await _dbContext
+                .Reserves
+                .Include(r => r.Room)
+                .Include(r => r.Guest)
+                .Where(r => r.Date == date)
+                .ToListAsync();
         }
     }
 }

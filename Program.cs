@@ -9,6 +9,9 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+        builder.Services.AddDbContext<HotelDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -20,9 +23,6 @@ internal class Program
         builder.Services.AddScoped<GuestService>();
         builder.Services.AddScoped<ReserveService>();
         builder.Services.AddScoped<RoomService>();
-
-        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-        builder.Services.AddDbContext<HotelDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
         var app = builder.Build();
 
